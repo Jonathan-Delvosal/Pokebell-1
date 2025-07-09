@@ -12,22 +12,35 @@ const rightScreen = document.getElementById('rightScreen')
 const Cri = document.getElementById('Cri')
 const pokedex = document.getElementById('pokedex')
 const versusContainer = document.getElementById('versus-container')
+const versusBattle = document.getElementById('versus-battle')
+
 const mainContainer = document.getElementById('main-container')
 const body = document.querySelector('body')
+const battle = document.getElementById('battle')
 
 let imageUrl;
 let i = 1;
 body.style.backgroundImage= 'url(../Assets/b6d33032-8ed4-4876-a1a7-8e98068b49b2_lakeanim_kristyphlosion_social.gif)';
+versusBattle.style.display = "none";
+versusContainer.style.display = "none";
 
 pokedex.onclick= ()=>{
     body.style.backgroundImage= 'url(../Assets/b6d33032-8ed4-4876-a1a7-8e98068b49b2_lakeanim_kristyphlosion_social.gif)';
     mainContainer.style.display = "flex";
     versusContainer.style.display = "none";
+    versusBattle.style.display = "none";
+    
 }
 versus.onclick= ()=>{
     body.style.backgroundImage= 'url(../Assets/DVMT-6OXcAE2rZY.jpg.afab972f972bd7fbd4253bc7aa1cf27f.jpg)';
     versusContainer.style.display = "flex";
     mainContainer.style.display = "none";
+    versusBattle.style.display = "none";
+}
+
+battle.onclick= ()=> {
+    versusContainer.style.display = "none";
+    versusBattle.style.display = "flex";
 }
 
 
