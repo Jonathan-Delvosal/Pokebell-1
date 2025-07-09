@@ -266,40 +266,42 @@ body {
     display: flex;
     flex-grow: 1;
     justify-content: center;
-    align-items: center;
+    
     
     #selectionPoke {
 
         display: flex;
         flex-direction: row;
 
-        border: 10px solid black;
+        align-items: flex-end;
+        width: 100%;
+        height: 100%;
 
-        #select1 {
-            margin: auto;
-            border: none;
+        
+
+        #select1, #select2 {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            flex-grow: 3;
             background-color: #f5f5f500;
             width: 136px;
-            height: 35px;
+            height: 100%;
             text-transform: capitalize;
             color: #fff;
+            
         }
 
-        #select2 {
 
-            margin: auto;
-            border: none;
-            background-color: #f5f5f500;
-            width: 136px;
-            height: 35px;
-            text-transform: capitalize;
-            color: #fff;
-        }
+        
 
         .eclate-btn {
+            flex-grow: 0.5;
+            align-self: flex-end;
 
-            width: 250px;
-            height: 150px;
+            width: 150px;
+            height: 100px;
+
             background: linear-gradient(145deg, #a8ff78, #78ffd6);
             /* vert pomme fluo */
             color: #111;
