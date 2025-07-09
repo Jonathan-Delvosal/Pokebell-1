@@ -8,11 +8,27 @@ const Info = document.getElementById('Info')
 const Stat = document.getElementById('Stat')
 const Visu = document.getElementById('Visu')
 const Atq = document.getElementById('Atq')
-const Cri = document.getElementById('Cri')
 const rightScreen = document.getElementById('rightScreen')
+const Cri = document.getElementById('Cri')
+const pokedex = document.getElementById('pokedex')
+const versusContainer = document.getElementById('versus-container')
+const mainContainer = document.getElementById('main-container')
+const body = document.querySelector('body')
+
 let imageUrl;
 let i = 1;
+body.style.backgroundImage= 'url(../Assets/b6d33032-8ed4-4876-a1a7-8e98068b49b2_lakeanim_kristyphlosion_social.gif)';
 
+pokedex.onclick= ()=>{
+    body.style.backgroundImage= 'url(../Assets/b6d33032-8ed4-4876-a1a7-8e98068b49b2_lakeanim_kristyphlosion_social.gif)';
+    mainContainer.style.display = "flex";
+    versusContainer.style.display = "none";
+}
+versus.onclick= ()=>{
+    body.style.backgroundImage= 'url(../Assets/DVMT-6OXcAE2rZY.jpg.afab972f972bd7fbd4253bc7aa1cf27f.jpg)';
+    versusContainer.style.display = "flex";
+    mainContainer.style.display = "none";
+}
 
 
 fetch('https://pokeapi.co/api/v2/pokemon-species/?limit=1025&offset=0').then(result => result.json()).then(result => {
